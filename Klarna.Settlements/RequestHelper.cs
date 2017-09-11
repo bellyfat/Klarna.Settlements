@@ -66,7 +66,7 @@ namespace Klarna.Settlements
             var result = new List<string>();
             foreach (PropertyDescriptor property in TypeDescriptor.GetProperties(obj))
             {
-                if (JsonConvert.SerializeObject(property.GetValue(obj)) != null)
+                if (JsonConvert.SerializeObject(property.GetValue(obj)) != "null")
                 {
                     result.Add(JsonConvert.SerializeObject(property.Name) + "=" + JsonConvert.SerializeObject(property.GetValue(obj)));
 
